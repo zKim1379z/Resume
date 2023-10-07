@@ -156,10 +156,10 @@ span{
 .home-img img{
     margin-left: 3rem; 
     width: 30vw;
-    min-width: 315px;
     object-fit: cover;
     object-position: 55% 45%;
     border-radius: 50%;
+    box-shadow: 0 0 2rem var(--highlight-alt-color);;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -415,7 +415,9 @@ span{
     }
 
     .home-img{
+        display: flex;
         width: 70vw;
+        justify-content: center;
         margin-top: 4rem;
     }
 
@@ -438,6 +440,11 @@ span{
 }
 
 @media (max-width: 617px){
+
+    .home-img img{
+        width: 75vw;
+    }
+
     .portfolio-container{
         grid-template-columns: 1fr;
     }
@@ -449,10 +456,15 @@ span{
         font-size: 50%;
     }
 
+    .home-img img{
+        width: 80vw;
+    }
+
     .contact form .input-box input {
         width: 100%;
     }
     
+
 }
 
 @media (max-width: 365px){
