@@ -3,153 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <style>
-       .header,
-       hr,
-       .infoblock,
-       .column-info
-       {
-        margin: 16px;
-       }
-
-       .infoblock{
-        display: grid;
-        grid-template-columns:40% 58.5% ;
-        gap: 16px;
-        min-width: 810px;
-       }
-
-       .contact{
-        display: grid;
-        /*grid template columns column1 = 32px , column2 = auto*/
-        grid-template-columns: 32px 100%;
-        align-items: center;
-        gap: 8px;
-       }
-       
-       /*Any class that start with 'icon'*/
-       [class^="icon"]{
-        width: 32px;
-        height: 32px;
-       }
-       
-       .column1{
-        height: auto;
-        background-color: #AED1E5;
-        border-radius: 10px;
-        
-       }
-
-       .column2{
-        height: auto;
-        background-color: #68BAE9;
-        border-radius: 10px;
-       }
-
-       .clearfix::after{
-        content: "";
-        display: table;
-        clear: both;
-       }
-       
-       body{
-        font-family: 'Courier New', Courier, monospace;
-       }
-
-       h1{
-        font-weight: normal;
-        font-size: 64px;
-        text-align: center;
-       }
-
-       p{
-        margin-top: 8px;
-        margin-bottom: 8px;
-       }
-
-    </style>
-
+    <link rel="stylesheet" href="styles.css">
+    <title>Pasawit | Portfolio</title>
 </head>
 <body>
-    <div class="header">
-        <div>
-            <h1><b>Pasawit</b><br>Puttibancharoensri</br></h1>
-        </div>
-    </div>
-    <hr class="horizontalLine" style="height: 2px;border: none;background-color: gray;">
-    
-    <div class="infoblock clearfix">
-        <div class="column1" >
-            <div class="column-info info-contact" style="margin-bottom: 32px;">
-                <h2>Contact</h2>
-                <div class="contact">
-                    <div class="grid-icon"><img class="icon-email" src="./images/email_icon.png" alt="An email icon"></div>
-                    <div class="grid-detail"><address><a href="mailto:pu.pasawit@gmail.com">pu.pasawit@gmail.com</a></address></div>
-                    <div class="grid-icon"><img class="icon-linkedin" src="./images/linkedin_icon.png" alt="A Linkedin icon"></div>
-                    <div class="grid-detail"><address><a href="https://www.linkedin.com/in/pasawit-puttibancharoensri-27b8b4282/">Linkedin</a></address></div>
-                    <div class="grid-icon"><img class="icon-github" src="./images/github-icon.png" alt="A Github icon"></div>
-                    <div class="grid-detail"><address><a href="https://github.com/zKim1379z">zKim1379z</a></address></div>
-                    
-                    
-                </div>
-            </div>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon" onclick="toggleIcon(this)"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about" >About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section Design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, I'm</h3>
+            <h1>Pasawit Puttibancharoensri</h1>
+            <h3>I'm a <span class="multiple-text"></span></h3>
+            <p>A developer who interested in the technology that make things more convenient, reduce the cost and pervent human error.</p>
             
-            <div class="column-info info-skill" style="margin-bottom: 32px;">
-                <h2>Skills</h2>
-                <ul style="padding-left: 14px;">
-                    <li>Arduino Uno, ESP8266, ESP32, Orange Pi</li>
-                    <li>HTML, CSS, Javascript</li>
-                    <li>C/C++, Python, Java</li>
-                    <li>MySQL</li>
-                </ul>
+            <div class="social-media">
+                <a href="https://github.com/zKim1379z"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/pasawit-puttibancharoensri-27b8b4282/"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
 
-            <div class="column-info info-language" style="margin-bottom: 32px;">
-                <h2>Language</h2>
-                <ul style="padding-left: 14px;">
-                    <li>Thai</li>
-                    <li>English</li>
-                    <li>Japanese</li>
-                </ul>
-            </div>
-
-            <div class="column-info info-education">
-                <h2>Education</h2>
-                <p style="font-size: medium; font-weight: bold;">Bachalor of Engineering in Computer</p>
-                <p>Thai-Nichi Institute of Technology</p>
-                <p>Bangkok, Thailand</p>
-                <p>2019-2023</p>
-            </div>
+            
         </div>
-    
-        <div class="column2">
-            <div class="column-info">
-                <h2>About</h2>
-                <p>Hi! I'm Pasawit, a new graduated Computer Engineering. I have experience with several programming languages and fundamental Embedded System.
-                    I'm also interested in Web Development and IoT technology. I hope my skill could be useful on your project.
-                </p>
-                
-                <h2>Experience</h2>
-                <h3>Automated Watering System IoT Farm</h3>
-                <p><em>Thai-Nichi Institute of Technology | 2022 </em> <br>
-                    Programmed the ESP8266 to control the watering system
-                    via Blynk IoT and also setup the dashboard
-                </p>
-
-                <h3>Backend Developer Internship</h3>
-                <p><em>Intellect Network Web Co.,Ltd. | June 2022 - September 2022</em> <br>
-                    Developed the IoT product to work with other device by REST API and record the status in database using mySQL
-
-                </p>
-                
-            </div>
+        <div class="home-img">
+            <img src="images/me2.jpg" alt="My Pic">
         </div>
         
-    </div>
+    </section>
 
-    <hr class="horizontalLine" style="height: 2px;border: none;background-color: gray;">
+    <!-- About Section Design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/me.jpg" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Engineer</h3>
+            <p>A new graduated, Computer Engineering Student. I have experienced in C/C++, Python, Java and also interested in IoT Development. Currently pursuing Frontend Development skills.
+                I'm a self-motivated and open-minded learner with a passion for staying current in technology trends.
+            </p>
+        </div>
+    </section>
 
 
+    <!-- Portfolio Section Design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">My <span>Project</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/automated-watering-system-iot.png" alt="iot-project">
+                <div class="portfolio-layer">
+                    <h4>IoT Watering System</h4>
+                    <p>Automated watering system using ESP8266, notify Line App and show the data on dashboard.</p>
+                    <a href="#"><button class="portfolio-btn">Read more</button></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/air-condition-intern.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>Air Con IoT</h4>
+                    <p>Developed Aircon Device which is controlled by web application.</p>
+                    <a href="#"><button class="portfolio-btn">Read more</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-button">
+            <button class="btn">Read More</button>
+        </div>
+
+    </section>
+
+    <!-- Contact Section Design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span> (WIP)</h2>
+        
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email Address">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by zKim1379z | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+    <!-- Import FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/f504c0f0fa.js" crossorigin="anonymous"></script>
+    
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- TypedJS -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script src="script.js"></script>
+
+    
 </body>
 </html>
